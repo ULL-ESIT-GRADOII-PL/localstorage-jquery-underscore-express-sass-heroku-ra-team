@@ -1,39 +1,26 @@
-var storedvalue;
-if (typeof(Storage !== "undefined")) {
-	if (localStorage.getItem("original")) {
-		storedvalue = localStorage.getItem("original");
-	    original.value = storedvalue;
-	}
-} else {
-	alert("Your Browser does not support the web storage APIs");
-}
+// This is th Express JS app file
+var express = require('express');	// Include express
+var app = express();	// Assign a express instance
+var expressLayouts = require('express-ejs-layouts');	// Include the express layouts
 
-function storeValue() {
-    var newname = document.getElementById("original").value;
+app.set('port', (process.env.PORT || 5000));
 
-    if (localStorage.getItem("original")) {
-        var storedvalue = localStorage.getItem("original");
+app.set('view engine', 'ejs');
+require('ejs').delimiter = '$';
 
-        if (confirm("Your value is already stored as " + 
-                    storedvalue + 
-                    ". Are you sure you want to change it to " + 
-                    newvalue + "?")) {
-            localStorage.setItem("original", newvalue);
-            alert("Your value was updated, reload the page to get it done!");
-        } else {
-            alert("OK, I'll keep calling you " + storedvalue);
-        }
+app.use(expressLayouts);
 
-    } else {
-        localStorage.setItem("original", newvalue);
-        alert("Your value has been stored as: " + 
-              newvalue + 
-              ". Reload the page to get it done!");
-    }
-}
+app.use(express.static(__dirname + '/'));
 
+app.get('/', function (request, response) {
+    response.render('index', { title: 'Language Processors - Comma Separated Values Analyzer' });
+});
 
-function clearLocalStorage() {
-    window.localStorage.removeItem("original");
-    alert("reload the page");
-}
+app.get('', function (request, response) {
+
+});
+
+app.listen(app.get('port'), function () {
+    console.log("Node app is running at localhost:" + app.get('port'));
+});
+module.exports = app;
