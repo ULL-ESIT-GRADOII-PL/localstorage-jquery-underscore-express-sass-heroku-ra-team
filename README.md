@@ -1,4 +1,4 @@
-# Práctica: Comma Separated Values
+# Práctica: Comma Separated Values (CSV)
 ## ESIT ULL - Grado en Ingeniería Informática - Tercer Curso - Itinerario: Computación
 ## Team: Adrián Rodríguez Bazaga (AdrianBZG) & Rudolf Cicko (alu0100824780)
 
