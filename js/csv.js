@@ -36,7 +36,7 @@
         r.push({ value: result, rowClass: rowclass });
       }
     }
-    var template = fillTable.innerHTML;
+    var template = finaltable.innerHTML;
     finaltable.innerHTML = _.template(template, {items: r});
 
     return r;
