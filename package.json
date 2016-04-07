@@ -33,6 +33,7 @@
 	"gulp-watch": "*",
 	"gulp-gh-pages": "*",
 	"gulp-clean": "*",
+	"gulp-sass": "*",
     "heroku": "^0.2.0",
     "karma": "^0.12.31",
     "karma-chai": "^0.1.0",
