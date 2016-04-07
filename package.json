@@ -1,0 +1,31 @@
+{
+  "name": "Comma Separated Values",
+  "version": "0.0.1",
+  "description": "Comma Separated Values",
+  "main": "csv.js",
+  "scripts": {
+    "chuchu": "mocha test",
+    "chai": "curl https://raw.githubusercontent.com/chaijs/chai/master/chai.js -o test/chai.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aluXXXXXXX/STW03.git"
+  },
+  "keywords": [
+    "comma"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aluXXXXXXX/STW03/issues"
+  },
+  "homepage": "https://github.com/aluXXXXXXX/STW03",
+  "devDependencies": {
+    "mocha": "*",
+    "sinon": "^1.17.3"
+  },
+  "scripts": {
+   "test": "./node_modules/karma/bin/karma start --single-run"
+  }
+
+}
