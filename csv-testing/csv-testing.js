@@ -2,11 +2,11 @@ var assert = chai.assert;
 
 suite('csv', function() {
     if (typeof __html__ !== 'undefined') {
-        document.body.innerHTML = __html__["tests/index.html"];
+        document.body.innerHTML = __html__["csv-testing/index.html"];
         original = document.getElementById("original");
         finaltable = document.getElementById("finaltable");
     }
-    test('Intr. correcta', function() {
+    test('Input working correctly', function() {
         original.value = 'a, b, c, d\naa, bb, cc, dd';
         main();
         var esperado = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>a</td>\n\t    \n\t    <td>b</td>\n\t    \n\t    <td>c</td>\n\t    \n\t    <td>d</td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="">\n\t    \n\t    <td>aa</td>\n\t    \n\t    <td>bb</td>\n\t    \n\t    <td>cc</td>\n\t    \n\t    <td>dd</td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t'
