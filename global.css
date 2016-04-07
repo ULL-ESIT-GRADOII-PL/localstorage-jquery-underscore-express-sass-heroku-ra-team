@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'CustomFont';
+  /*a name to be used later*/
+  src: url("fonts/customFont.ttf");
+  /*URL to font*/ }
+h1 {
+  color: #1E824C;
+  text-align: center;
+  font-family: CustomFont; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #86E2D5; }
+
+/*# sourceMappingURL=global.css.map */
