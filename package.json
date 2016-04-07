@@ -50,10 +50,9 @@
     "express-ejs-layouts": "^1.1.0",
     "underscore": "^1.8.3",
     "body-parser":"*"
-  }
+  },
   "scripts": {
     "test": "gulp test",
     "start": "node app.js"
   }
-
 }
