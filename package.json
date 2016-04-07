@@ -32,6 +32,7 @@
     "gulp-util": "^3.0.7",
 	"gulp-watch": "*",
 	"gulp-gh-pages": "*",
+	"gulp-clean": "*",
     "heroku": "^0.2.0",
     "karma": "^0.12.31",
     "karma-chai": "^0.1.0",
