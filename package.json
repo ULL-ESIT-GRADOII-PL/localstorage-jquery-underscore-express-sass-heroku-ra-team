@@ -41,7 +41,7 @@
     "karma-phantomjs-launcher": "^0.1.4",
     "mocha": "*",
     "morgan": "~1.6.1",
-    "phantomjs": "^1.9.16"
+    "phantomjs": "^1.9.16",
     "sinon": "^1.17.3"
   },
   "dependencies": {
