@@ -5,13 +5,14 @@ $title-color: #1E824C;
 
 @font-face {
     font-family: 'CustomFont'; /*a name to be used later*/
-    src: url('fonts/customFont.ttf'); /*URL to font*/
+    src: url('fonts/FFF_Tusj.ttf'); /*URL to font*/
 }
 
 h1 {
   color: $title-color;
   text-align: center;
   font-family: CustomFont;
+  font-size: 50px;
 }
 
 body {
