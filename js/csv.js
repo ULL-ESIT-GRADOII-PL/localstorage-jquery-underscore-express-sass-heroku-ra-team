@@ -36,8 +36,8 @@
         r.push({ value: result, rowClass: rowclass });
       }
     }
-    var template = finaltable.innerHTML;
-    finaltable.innerHTML = _.template(template, {items: r});
+    var template = fillTable.innerHTML;
+    fillTable.innerHTML = _.template(template, {items: r});
 
     return r;
   };
