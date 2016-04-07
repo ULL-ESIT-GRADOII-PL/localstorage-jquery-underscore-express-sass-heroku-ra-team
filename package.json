@@ -1,5 +1,5 @@
 {
-  "name": "Comma Separated Values",
+  "name": "csv",
   "version": "0.0.2",
   "description": "Comma Separated Values",
   "main": "csv.js",
