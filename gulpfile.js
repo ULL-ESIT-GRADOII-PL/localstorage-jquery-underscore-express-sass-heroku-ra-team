@@ -45,12 +45,6 @@ gulp.task('minify-all', function () {
   .pipe(gulp.dest('./minified/'))
 });
 
-gulp.task('minify-html', function() {
-  return gulp.src(input.html)
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest(output.html));
-});
-
 // Deploy to gh pages
 gulp.task('deploy', function() {
   return gulp.src('./csv-testing/*')
