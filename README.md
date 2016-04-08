@@ -2,11 +2,12 @@
 ## ESIT ULL - Grado en Ingeniería Informática - Tercer Curso - Itinerario: Computación
 ## Team: Adrián Rodríguez Bazaga (AdrianBZG) & Rudolf Cicko (alu0100824780)
 
-Build Status:
+### Build Status
+
+Using Travis:
 [![Build Status](https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku.svg?branch=master)](https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku)
 
-Heroku Link: [https://damp-fjord-23953.herokuapp.com/](https://damp-fjord-23953.herokuapp.com/)<br>
-Nota: Puede que no funcione si lleva mucho tiempo inactiva la maquina, ya que la versión gratis de Heroku lo apaga a la media hora de inactividad.
+### Descripción
 
 Este repositorio aloja la práctica de CSV utilizando LocalStorage, JQuery, Underscore, Express, Sass, Heroku
 
@@ -16,6 +17,15 @@ For more information look at:
 * La [descripción de la práctica](https://casianorodriguezleon.gitbooks.io/pl1516/content/practicas/csv.html)
 * See it working at [CSV en GitHub Pages](http://crguezl.github.io/csv/)
 * See also [CSV](http://en.wikipedia.org/wiki/Comma-separated_values) at Wikipedia.
+
+### Enlace al despliegue en Heroku
+
+Heroku Link: [https://damp-fjord-23953.herokuapp.com/](https://damp-fjord-23953.herokuapp.com/)<br>
+Nota: Puede que no funcione si lleva mucho tiempo inactiva la maquina, ya que la versión gratis de Heroku lo apaga a la media hora de inactividad.
+
+### Enlace a las pruebas en Travis
+
+Pruebas en Travis: [https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku](https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku)<br>
 
 ### Despliegue en github.io:
 * [Click aquí](http://lambdacode.github.io/LocalStorage-JQuery-Underscore-Express-Sass-Heroku)
