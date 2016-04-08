@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku"
   },
+  "engines" : {
+    "node": ">=0.12 <=5"
+  },
   "keywords": [
     "comma separated values"
   ],
