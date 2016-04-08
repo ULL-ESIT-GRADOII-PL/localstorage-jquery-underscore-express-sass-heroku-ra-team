@@ -8,6 +8,7 @@ var ghPages = require('gulp-gh-pages');		// Used to update the gh-pages branch
 var clean = require('gulp-clean');	 // To clean the public directory
 var uglify = require('gulp-uglify');     // To uglify the codes
 var sass = require('gulp-sass');	// This is used to automatize the Sass tasks
+var karma = require('gulp-karma');  // Include Karma
 
 var sourceDir = 'src/';
 var input = {

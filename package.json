@@ -1,5 +1,5 @@
 {
-  "name": "Comma Separated Values",
+  "name": "csv",
   "version": "0.0.2",
   "description": "Comma Separated Values",
   "main": "csv.js",
@@ -30,6 +30,10 @@
     "gulp-shell": "^0.4.0",
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.7",
+	"gulp-watch": "*",
+	"gulp-gh-pages": "*",
+	"gulp-clean": "*",
+	"gulp-sass": "*",
     "heroku": "^0.2.0",
     "karma": "^0.12.31",
     "karma-chai": "^0.1.0",
@@ -41,7 +45,7 @@
     "karma-phantomjs-launcher": "^0.1.4",
     "mocha": "*",
     "morgan": "~1.6.1",
-    "phantomjs": "^1.9.16"
+    "phantomjs": "^1.9.16",
     "sinon": "^1.17.3"
   },
   "dependencies": {
@@ -50,10 +54,9 @@
     "express-ejs-layouts": "^1.1.0",
     "underscore": "^1.8.3",
     "body-parser":"*"
-  }
+  },
   "scripts": {
     "test": "gulp test",
     "start": "node app.js"
   }
-
 }

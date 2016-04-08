@@ -1,19 +1,18 @@
 // Karma configuration
-// Generated on Mon Apr 04 2016 18:33:56 GMT+0200 (Hora de verano romance)
 
 module.exports = function(config) {
   config.set({
 
-    // base path that will be used to resolve all patterns (eg. files, exclude)
+    // Base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
 
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    // Frameworks to use
+    // Available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha', 'chai'],
     client: {
       mocha: {
-        ui: 'tdd'
+        ui: 'bdd'
       }
     },
 
@@ -22,9 +21,9 @@ module.exports = function(config) {
     files: [
     	'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
       'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js',
-      'tests/index.html',
+      'csv-testing/index.html',
       'js/*.js',
-      'tests/tests2.js'
+      'csv-testing/csv-testing.js'
     ],
 
     // list of files to exclude
@@ -35,7 +34,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'tests/index.html':['html2js'],
+      'csv-testing/index.html':['html2js'],
     },
 
     // test results reporter to use
@@ -58,13 +57,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Firefox', 'TravisCIChrome'],
-    customLaunchers: {
-      TravisCIChrome: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    },
+    browsers: ['Firefox', 'PhantomJS'],
 
    // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,
@@ -75,7 +68,4 @@ module.exports = function(config) {
 
 
   });
-  if (process.env.TRAVIS) {
-    config.browsers = ['PhantomJS', 'Firefox', 'chromeTravisCI'];
-  }
 };

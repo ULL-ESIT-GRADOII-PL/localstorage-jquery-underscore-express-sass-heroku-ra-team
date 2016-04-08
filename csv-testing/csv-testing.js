@@ -1,55 +1,51 @@
-var assert = chai.assert;
+// Testing CSV
 
-suite('csv', function() {
-    if (typeof __html__ !== 'undefined') {
-        document.body.innerHTML = __html__["tests/index.html"];
-        original = document.getElementById("original");
-        finaltable = document.getElementById("finaltable");
+var expect = chai.expect;
+
+describe("CSV", function () {
+	if (typeof __html__ !== 'undefined') {
+		document.body.innerHTML = __html__["csv-testing/index.html"];
+		original = document.getElementById("original");
+		finaltable = document.getElementById("finaltable");
     }
-    test('Intr. correcta', function() {
-        original.value = 'a, b, c, d\naa, bb, cc, dd';
-        main();
-        var esperado = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>a</td>\n\t    \n\t    <td>b</td>\n\t    \n\t    <td>c</td>\n\t    \n\t    <td>d</td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="">\n\t    \n\t    <td>aa</td>\n\t    \n\t    <td>bb</td>\n\t    \n\t    <td>cc</td>\n\t    \n\t    <td>dd</td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t'
-        assert.deepEqual(finaltable.innerHTML, esperado);
+    describe("Calculate function", function() {
+        
+    it("Should accept a string", function() {
+      var testString = '"CSV"';
+      var r = calculate(testString);
+      expect(r[0].value[0]).to.equal('CSV');
     });
-    test('LocalStorage', function() {
-        original.value = 'Local, storage, is, working';
-        main();
-        original.value = 'New value';
-        assert.deepEqual(localStorage.original, 'Local, storage, is, working');
+     it('Should recognize a number with a comma', function() {
+      var testString = '"3,4"';
+      var r = calculate(testString);
+     expect(r[0].value[0]).to.equal('3,4');
     });
-    test('Default table', function() {
-        original.value = '1,2,3\n4,5,6';
-        main();
-        var valueExpected = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>1</td>\n\t    \n\t    <td>2</td>\n\t    \n\t    <td>3</td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="">\n\t    \n\t    <td>4</td>\n\t    \n\t    <td>5</td>\n\t    \n\t    <td>6</td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t';
-        assert.deepEqual(finaltable.innerHTML, valueExpected);
+    it("Should recognize a string with a comma on the right", function() {
+      var testString = '"CSV,"';
+      var r = calculate(testString);
+      expect(r[0].value[0]).to.equal('CSV,');
     });
-
-    test('Table using commas', function() {
-        original.value = '1,,3,\n6,7,8,';
-        main();
-        var valueExpected = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>1</td>\n\t    \n\t    <td></td>\n\t    \n\t    <td>3</td>\n\t    \n\t    <td></td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="">\n\t    \n\t    <td>6</td>\n\t    \n\t    <td>7</td>\n\t    \n\t    <td>8</td>\n\t    \n\t    <td></td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t';
-        assert.deepEqual(finaltable.innerHTML, valueExpected);
+    it("Should recognize a string with a comma on the left", function() {
+      var testString = '",CSV"';
+      var r = calculate(testString);
+      expect(r[0].value[0]).to.equal(',CSV');
     });
-
-    test('Table using commas (Should produce errors)', function() {
-        original.value = '1,,3,\n6,7,8,,,,';
-        main();
-        var valueExpected = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>1</td>\n\t    \n\t    <td></td>\n\t    \n\t    <td>3</td>\n\t    \n\t    <td></td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="error">\n\t    \n\t    <td>6</td>\n\t    \n\t    <td>7</td>\n\t    \n\t    <td>8</td>\n\t    \n\t    <td></td>\n\t    \n\t    <td></td>\n\t    \n\t    <td></td>\n\t    \n\t    <td></td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t';
-        assert.deepEqual(finaltable.innerHTML, valueExpected);
+    it("Should recognize a string with spaces", function() {
+      var testString = '" CSV"';
+      var r = calculate(testString);
+      expect(r[0].value[0]).to.equal(' CSV');
     });
-
-    test('Table using commas', function() {
-        original.value = '1,2,3,"4,5"\n6,7,8,"9,10"';
-        main();
-        var valueExpected = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>1</td>\n\t    \n\t    <td>2</td>\n\t    \n\t    <td>3</td>\n\t    \n\t    <td>4,5</td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="">\n\t    \n\t    <td>6</td>\n\t    \n\t    <td>7</td>\n\t    \n\t    <td>8</td>\n\t    \n\t    <td>9,10</td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t';
-        assert.deepEqual(finaltable.innerHTML, valueExpected);
+    it("Should recognize a string separated by commas", function() {
+      var testString = '"CSV","CSS"';
+      var r = calculate(testString);
+      expect(r[0].value[0]).to.equal('CSV');
+      expect(r[0].value[1]).to.equal('CSS');
     });
-
-    test('Creating table using commas wrongly', function() {
-        original.value = '1,2,3,"4,5"\n6,7,8,"9,7",b';
-        main();
-        var valueExpected = '\n\t    <table id="result" class="center">\n\t    \n\t    <tbody><tr class="">\n\t    \n\t    <td>1</td>\n\t    \n\t    <td>2</td>\n\t    \n\t    <td>3</td>\n\t    \n\t    <td>4,5</td>\n\t    \n\t    </tr>\n\t    \n\t    <tr class="error">\n\t    \n\t    <td>6</td>\n\t    \n\t    <td>7</td>\n\t    \n\t    <td>8</td>\n\t    \n\t    <td>9,7</td>\n\t    \n\t    <td>b</td>\n\t    \n\t    </tr>\n\t    \n\t    </tbody></table>\n\t';
-        assert.deepEqual(finaltable.innerHTML, valueExpected);
+    it("Should recognize a string separated by commas and spaces", function() {
+      var testString = ' ,"CSV"';
+      var r = calculate(testString);
+      expect(r[0].value[0]).to.equal(' ');
+      expect(r[0].value[1]).to.equal('CSV');
     });
+  });
 });

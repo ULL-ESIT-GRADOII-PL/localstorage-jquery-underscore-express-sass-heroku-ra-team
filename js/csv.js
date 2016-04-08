@@ -5,6 +5,7 @@
   var regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
 
   exports.calculate = function(original) {
+//var a =original.value;
     var lines = original.split(/\n+\s*/);
     var commonLength = lines[0].match(regexp).length;
     var r = [];
@@ -25,7 +26,7 @@ if (window.localStorage) {
       var result = [];
       var error = false;
 
-      // Skip empty lines and commentaries
+      // skip empty lines and comments
       if (temp.match(/(^\s*$)|(^#.*)/)) continue;
       if (m) {
         result = m.map(removeQuotes);
@@ -33,6 +34,10 @@ if (window.localStorage) {
         var rowclass = error? 'error' : '';
         r.push({ value: result, rowClass: rowclass });
       }
+      /*else {
+        var errmsg = 'La fila "' + temp + '" no es un valor de CSV permitido.';
+        r.push({value: errmsg.split("").splice(commonLength), rowClass: 'error'});
+      }*/
     }
     var template = fillTable.innerHTML;
     finaltable.innerHTML = _.template(template, {items: r});
