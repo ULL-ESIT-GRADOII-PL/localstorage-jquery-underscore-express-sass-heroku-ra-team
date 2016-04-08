@@ -39,11 +39,11 @@ describe('CSV Testing', function() {
       var aux = calculate(this.original);
       expect(aux[0].value).to.deep.equal(['color','number','object']);
       expect(aux[1].value).to.deep.equal(['blue','2','']);
-      expect(aux[2].value).to.deep.equal(['red','','pencil']);
+      expect(aux[2].value).to.deep.equal(['car','','pencil']);
     });
 
     it ('Should analyze an input if the quotation marks are optional',function() {
-      this.original = "color,\"number\",\"object\"\n\"blue\",2 ,\"coche\"\n\"rojo\",\"62\",pencil";
+      this.original = "color,\"number\",\"object\"\n\"blue\",2 ,\"car\"\n\"red\",\"62\",pencil";
       var aux = calculate(this.original);
       expect(aux[0].value).to.deep.equal(['color','number','object']);
       expect(aux[1].value).to.deep.equal(['blue','2','car']);
