@@ -3,6 +3,11 @@
 var expect = chai.expect;
 
 describe("CSV", function () {
+	if (typeof __html__ !== 'undefined') {
+		document.body.innerHTML = __html__["csv-testing/index.html"];
+		original = document.getElementById("original");
+		finaltable = document.getElementById("finaltable");
+    }
     describe("Calculate function", function() {
         
     it("Should accept a string", function() {
