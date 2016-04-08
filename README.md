@@ -24,9 +24,13 @@ For more information look at:
 Heroku Link: [https://damp-fjord-23953.herokuapp.com/](https://damp-fjord-23953.herokuapp.com/)<br>
 Nota: Puede que no funcione si lleva mucho tiempo inactiva la maquina, ya que la versión gratis de Heroku lo apaga a la media hora de inactividad.
 
-### Enlace a las pruebas en Travis
+### Enlace a las pruebas
 
-Pruebas en Travis: [https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku](https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku)<br>
+Pruebas: [http://lambdacode.github.io/LocalStorage-JQuery-Underscore-Express-Sass-Heroku/csv-testing/](http://lambdacode.github.io/LocalStorage-JQuery-Underscore-Express-Sass-Heroku/csv-testing/)<br>
+
+### Enlace a la integración continua en Travis
+
+CI en Travis: [https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku](https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku)<br>
 
 ### Despliegue en github.io:
 * [Click aquí](http://lambdacode.github.io/LocalStorage-JQuery-Underscore-Express-Sass-Heroku)
