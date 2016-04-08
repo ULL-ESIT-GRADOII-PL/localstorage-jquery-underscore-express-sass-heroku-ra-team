@@ -42,7 +42,7 @@ describe('CSV Testing', function() {
       expect(aux[2].value).to.deep.equal(['red','','pencil']);
     });
 
-    it ('Should analyze an input if the ' ' are optional',function() {
+    it ('Should analyze an input if the quotation marks are optional',function() {
       this.original = "color,\"number\",\"object\"\n\"blue\",2 ,\"coche\"\n\"rojo\",\"62\",pencil";
       var aux = calculate(this.original);
       expect(aux[0].value).to.deep.equal(['color','number','object']);
