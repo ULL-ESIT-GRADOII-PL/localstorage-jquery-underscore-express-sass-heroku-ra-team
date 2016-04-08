@@ -2,6 +2,9 @@
 ## ESIT ULL - Grado en Ingeniería Informática - Tercer Curso - Itinerario: Computación
 ## Team: Adrián Rodríguez Bazaga (AdrianBZG) & Rudolf Cicko (alu0100824780)
 
+Build Status:
+[![Build Status](https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku.svg?branch=master)](https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku)
+
 Este repositorio aloja la práctica de CSV utilizando LocalStorage, JQuery, Underscore, Express, Sass, Heroku
 
 For more information look at:
