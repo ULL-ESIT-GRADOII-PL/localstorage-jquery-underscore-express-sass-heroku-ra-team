@@ -4,7 +4,7 @@
 
 ### Build Status
 
-Using Travis:
+Travis Badge:
 [![Build Status](https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku.svg?branch=master)](https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku)
 
 ### Descripción
