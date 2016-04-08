@@ -10,7 +10,7 @@ require('ejs').delimiter = '$';
 
 app.use(expressLayouts);
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/csv-testing'));
 
 app.get('/', function (request, response) {
     response.render('index', { title: 'Language Processors - Comma Separated Values Analyzer' });
