@@ -10,6 +10,7 @@ Using Travis:
 ### Descripción
 
 Este repositorio aloja la práctica de CSV utilizando LocalStorage, JQuery, Underscore, Express, Sass, Heroku
+Además se utiliza Karma para las pruebas, con Mocha + Chai + Sinon, y se hace uso de Blanket para el cubrimiento del código.
 
 For more information look at:
 
