@@ -53,7 +53,7 @@ gulp.task('minify-html', function() {
 
 // Deploy to gh pages
 gulp.task('deploy', function() {
-  return gulp.src('./minified/**/*')
+  return gulp.src('./csv-testing/*')
     .pipe(ghPages());
 });
 
