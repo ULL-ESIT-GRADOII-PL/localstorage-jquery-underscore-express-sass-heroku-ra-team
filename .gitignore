@@ -2,4 +2,7 @@
 node_modules
 
 # Ignore cache files from Sass
-.sass-cache/*
+.sass-*
+
+# Ignore bin
+bin/
