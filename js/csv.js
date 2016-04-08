@@ -3,13 +3,18 @@
   // See http://en.wikipedia.org/wiki/Comma-separated_values
 
   var regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
-
   exports.calculate = function(original) {
-//var a =original.value;
     var lines = original.split(/\n+\s*/);
-    var commonLength = lines[0].match(regexp).length;
-    var r = [];
+    var firstLine;
 
+    for (var i in lines)
+      if (lines[i].match(regexp)) {
+        firstLine = i;
+        var commonLength = lines[i].match(regexp).length;
+        break;
+      }
+
+    var r = [];
     var removeQuotes = function(field) {
       var removecomma = field.replace(/,\s*$/, '');
       var remove1stquote = removecomma.replace(/^\s*"/, '');
@@ -17,31 +22,34 @@
       var removeescapedquotes = removelastquote.replace(/\\"/, '"');
       return removeescapedquotes;
     };
-if (window.localStorage) {
-  localStorage.original = original;
-}
+
     for (var t in lines) {
       var temp = lines[t];
       var m = temp.match(regexp);
       var result = [];
       var error = false;
+      var first = false;
 
       // skip empty lines and comments
       if (temp.match(/(^\s*$)|(^#.*)/)) continue;
       if (m) {
         result = m.map(removeQuotes);
         error = (commonLength != m.length);
-        var rowclass = error? 'error' : '';
-        r.push({ value: result, rowClass: rowclass });
-      }
-      /*else {
+        first = (firstLine == t);
+        var rowclass = error ? 'error' : '';
+        rowclass = first ? 'first' : rowclass;
+        r.push({
+          value: result,
+          rowClass: rowclass
+        });
+      } else {
         var errmsg = 'La fila "' + temp + '" no es un valor de CSV permitido.';
-        r.push({value: errmsg.split("").splice(commonLength), rowClass: 'error'});
-      }*/
+        r.push({
+          value: errmsg.split("").splice(commonLength),
+          rowClass: 'error'
+        });
+      }
     }
-    var template = fillTable.innerHTML;
-    finaltable.innerHTML = _.template(template, {items: r});
-
     return r;
   };
 })(this);

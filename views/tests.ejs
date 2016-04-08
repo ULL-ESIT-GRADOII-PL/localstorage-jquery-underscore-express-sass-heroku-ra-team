@@ -1,86 +1,110 @@
 <div class="container">
-        <div class="page-header">
+    <div class="page-header">
 
-            <nav class="navbar navbar-inverse">
-                <div class="container">
-                    <div class="navbar-header">
-                        <a href="/" class="navbar-brand">Comma Separated Values Analyzer</a>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="https://github.com/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku" target="_blank">Repositorio en GitHub</a></li>
-                            <li><a href="#">Tests</a></li>
-                            <li><a href="https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku" target="_blank">Travis</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">Tools <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li class="divider"></li>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">Comma Separated Values Analyzer</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="https://github.com/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku" target="_blank">Repositorio en GitHub</a>
+                        </li>
+                        <li><a href="#">Tests</a>
+                        </li>
+                        <li><a href="https://travis-ci.org/LambdaCode/LocalStorage-JQuery-Underscore-Express-Sass-Heroku" target="_blank">Travis</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">Tools <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="divider"></li>
                                 <li class="dropdown-header">Old tools</li>
                                 <li class="divider"></li>
-                                <li><a href="http://chaijs.com/" target="_blank">Chai</a></li>
-                                <li><a href="http://mochajs.org/" target="_blank">Mocha</a></li>
-                                <li><a href="http://karma-runner.github.io/0.12/index.html" target="_blank">Karma</a></li>
-                                <li><a href="http://blanketjs.org/" target="_blank">Blanket</a></li>
-                                <li><a href="https://travis-ci.org" target="_blank">Travis</a></li>
-                                <li><a href="http://getbootstrap.com" target="_blank">BootStrap</a></li>
-                                <li><a href="http://www.w3schools.com/html/html5_webstorage.asp" target="_blank">LocalStorage</a></li>
-                                <li><a href="http://underscorejs.org/" target="_blank">Underscore</a></li>
-                                <li><a href="http://www.w3schools.com/jquery/default.asp" target="_blank">jQuery-Tutorial</a></li>
-                                <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+                                <li><a href="http://chaijs.com/" target="_blank">Chai</a>
+                                </li>
+                                <li><a href="http://mochajs.org/" target="_blank">Mocha</a>
+                                </li>
+                                <li><a href="http://karma-runner.github.io/0.12/index.html" target="_blank">Karma</a>
+                                </li>
+                                <li><a href="http://blanketjs.org/" target="_blank">Blanket</a>
+                                </li>
+                                <li><a href="https://travis-ci.org" target="_blank">Travis</a>
+                                </li>
+                                <li><a href="http://getbootstrap.com" target="_blank">BootStrap</a>
+                                </li>
+                                <li><a href="http://www.w3schools.com/html/html5_webstorage.asp" target="_blank">LocalStorage</a>
+                                </li>
+                                <li><a href="http://underscorejs.org/" target="_blank">Underscore</a>
+                                </li>
+                                <li><a href="http://www.w3schools.com/jquery/default.asp" target="_blank">jQuery-Tutorial</a>
+                                </li>
+                                <li><a href="http://jquery.com/" target="_blank">jQuery</a>
+                                </li>
                                 <li class="divider"></li>
                                 <li class="dropdown-header">New tools</li>
                                 <li class="divider"></li>
-                                <li><a href="https://www.heroku.com/" target="_blank">Heroku</a></li>
-                                <li><a href="http://es.wikipedia.org/wiki/AJAX" target="_blank"> Ajax (wikipedia)</a></li>
-                                <li><a href="http://www.w3schools.com/ajax/" target="_blank"> Ajax (tutorial)</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">Developers <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li class="divider"></li>
-                                    <li class="dropdown-header">User page</li>
-                                    <li class="divider"></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                                <li><a href="https://www.heroku.com/" target="_blank">Heroku</a>
+                                </li>
+                                <li><a href="http://es.wikipedia.org/wiki/AJAX" target="_blank"> Ajax (wikipedia)</a>
+                                </li>
+                                <li><a href="http://www.w3schools.com/ajax/" target="_blank"> Ajax (tutorial)</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">Developers <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="divider"></li>
+                                <li class="dropdown-header">User page</li>
+                                <li class="divider"></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
-        <div>
-            <h3>Write a CSV string in text field and click 'Analyze'. The program outputs a table with the specified data.</h3>
-        </div>
-        <div class="jumbotron">
-            <table>
-                <thead class="thead" style="text-align:center;">
-                    <td><b><p>CSV Text</p></b></td>
-                    <td id="table_string" style="display:none;"><b><p>Table</p></b></td>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <textarea rows="6" cols="80" autofocus="" id="csv_text"></textarea>
-                            <p></p><button class="btn btn-danger" id="analizar">Analyze</button>
-                        </td>
-                        <td style="padding-left: 10px;">
-                            <!-- Here appears the generated table -->
-                            <span id="table"></span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            </div>
+        </nav>
     </div>
+    <div>
+        <h3>Write a CSV string in text field and click 'Analyze'. The program outputs a table with the specified data.</h3>
+    </div>
+    <div class="jumbotron">
+        <table>
+            <thead class="thead" style="text-align:center;">
+                <td><b><p>CSV Text</p></b>
+                </td>
+                <td id="table_string" style="display:none;"><b><p>Table</p></b>
+                </td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <textarea rows="6" cols="80" autofocus="" id="csv_text"></textarea>
+                        <p></p>
+                        <button class="btn btn-danger" id="analizar">Analyze</button>
+                    </td>
+                    <td style="padding-left: 10px;">
+                        <!-- Here appears the generated table -->
+                        <span id="table"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 
-  <div id="mocha"><p></p></div>
-  <div id="messages"></div>
-  <div id="fixtures"></div>
-  <script src="mocha.js"></script>
-  <script src="chai.js"></script>
-  <script src="blanket.js"
-        data-cover-adapter="mocha-blanket.js"></script>
-  <script>mocha.setup('tdd')</script>
-  <script src="../tests/tests.js"></script>
-  <script>mocha.run();</script>
+<div id="mocha">
+    <p></p>
+</div>
+<div id="messages"></div>
+<div id="fixtures"></div>
+<script src="mocha.js"></script>
+<script src="chai.js"></script>
+<script src="blanket.js" data-cover-adapter="mocha-blanket.js"></script>
+<script>
+    mocha.setup('tdd')
+</script>
+<script src="../tests/tests.js"></script>
+<script>
+    mocha.run();
+</script>
