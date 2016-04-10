@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'CustomFont';
   /*a name to be used later*/
-  src: url("fonts/FFF_Tusj.ttf");
+  src: url("fonts/GoodDog.ttf");
   /*URL to font*/ }
 h1 {
   color: #1E824C;
@@ -14,8 +14,23 @@ body {
   background-color: #86E2D5; }
 
 
-#result {
-  border: 1px solid black;
+
+div, table, th, td {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
+
+table, th, td {
+  border: 1px solid green; }
+
+tr:nth-child(odd) {
+  background-color: #1E824C; }
+
+tr:nth-child(even) {
+  background-color: white; }
+
+tr.error {
+  background-color: red; }
 /*# sourceMappingURL=global.css.map */
