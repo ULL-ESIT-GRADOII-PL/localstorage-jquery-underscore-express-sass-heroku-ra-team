@@ -2,10 +2,17 @@
   "use strict"; // Use ECMAScript 5 strict mode in browsers that support it
   // See http://en.wikipedia.org/wiki/Comma-separated_values
 
-  var regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
+  var regexp = /"((?:[^"\\]|\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g;
   exports.calculate = function(original) {
     var lines = original.split(/\n+\s*/);
-    var commonLength = lines[0].match(regexp).length;
+    var commonLength;
+    if (lines) {
+      commonLength = 0;
+    }
+    else {
+      commonLength = lines[0].match(regexp).length;
+    }
+
     var r = [];
     var removeQuotes = function(field) {
       var removecomma = field.replace(/,\s*$/, '');
@@ -30,9 +37,8 @@
         r.push({ value: result, rowClass: rowclass });
       }
       else {
-        var error = 'The Row "' + temp + '" is not an allowed CSV value'
-        alert(error);
-        r.push({value: error.split("").splite(commonLength), rowClass: 'error'})
+        var errmsg = 'La fila "' + temp + '" no es un valor de CSV permitido.';
+        r.push({value: errmsg.split("").splice(commonLength), rowClass: 'error'});
       }
     }
     return r;
