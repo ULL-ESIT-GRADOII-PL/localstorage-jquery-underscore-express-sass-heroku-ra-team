@@ -19,11 +19,23 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-    	'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+	  'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
       'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js',
-      'csv-testing/index.html',
-      'js/*.js',
-      'csv-testing/csv-testing.js'
+      'public/test/index.html',
+      'public/js/csv.js',
+      'public/test/csv-testing.js'
+    ],
+    
+    files: [
+      'public/js/csv.js',
+      'public/test/csv-testing.js',
+      'public/vendor/chai.js',
+      'public/vendor/mocha.css',
+      'public/vendor/mocha.js',
+      'public/vendor/sinon-1.17.3.js',
+      'public/vendor/blanket.min.js',
+      'public/vendor/mocha-blanket.js',
+      'public/vendor/sinon-1.7.1.js'
     ],
 
     // list of files to exclude
@@ -34,8 +46,18 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'csv-testing/index.html':['html2js'],
+      'public/test/index.html':['html2js'],
     },
+    
+    plugins : [
+      'karma-mocha',
+      'karma-chai',
+      'karma-chrome-launcher',
+      'karma-firefox-launcher',
+      'karma-html2js-preprocessor',
+      'karma-phantomjs-launcher',
+      'karma-safari-launcher'
+    ],
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
