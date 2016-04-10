@@ -27,6 +27,9 @@ table, th, td {
 tr:nth-child(odd) {
   background-color: #1E824C; }
 
+tr:nth-child(even) {
+  background-color: white; }
+
 
 
 /*# sourceMappingURL=global.css.map */
