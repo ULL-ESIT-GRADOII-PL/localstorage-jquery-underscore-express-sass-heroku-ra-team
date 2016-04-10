@@ -1,6 +1,21 @@
 var expect = chai.expect
 
 describe('CSV Testing', function() {
+  // Using Sinon
+  var sandbox;
+	
+  beforeEach(function() {
+	// Using Sinon
+	sandbox = sinon.sandbox.create();
+	sandbox.stub(window.console, "log");
+	sandbox.stub(window.console, "error");
+  });
+  
+  afterEach(function() {
+	// Using Sinon
+	sandbox.restore();
+  });
+  
   describe('Testing calculate function', function() {
     it ('Should know correctly the number of lines',function() {
       this.original = "\"color\",\"number\",\"object\"\n\"blue\",\"2\",\"car\"\n\"red\",\"6,2\",\"pencil\"";
