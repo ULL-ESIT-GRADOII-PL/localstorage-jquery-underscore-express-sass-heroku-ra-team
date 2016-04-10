@@ -1,26 +1,19 @@
 // This is th Express JS app file
-var express = require('express');	// Include express
-var app = express();	// Assign a express instance
-var expressLayouts = require('express-ejs-layouts');	// Include the express layouts
+var express = require('express');
+var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.set('view engine', 'ejs');
-require('ejs').delimiter = '$';
-
-app.use(expressLayouts);
-
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function (request, response) {
-    response.render('index', { title: 'Language Processors - Comma Separated Values Analyzer' });
+// Views is directory for all template files
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+app.get('/', function(request, response) {
+  response.render('index');
 });
 
-//app.get('/test', function (request, response) {
-    //response.render('csv-testing/test', { title: 'CSV TESTS' });
-//});
-
-app.listen(app.get('port'), function () {
-    console.log("Node app is running at localhost:" + app.get('port'));
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
-module.exports = app;
