@@ -42,11 +42,11 @@ describe('CSV Testing', function() {
       this.original = "\"color\",\"number\",\"object\"\n\"blue\",\"2\",\"car\",\"bike\"\n\"red\",\"62\",\"pencil\"";
       var aux = calculate(this.original);
       expect(aux[0].value).to.deep.equal(['color','number','object']);
-      expect(aux[0].rowClass).to.deep.equal('');
+      expect(aux[0].rowClass).to.deep.equal('error');
       expect(aux[1].value).to.deep.equal(['blue','2','car','bike']);
       expect(aux[1].rowClass).to.deep.equal('error');
       expect(aux[2].value).to.deep.equal(['red','62','pencil']);
-      expect(aux[2].rowClass).to.deep.equal('');
+      expect(aux[2].rowClass).to.deep.equal('error');
     });
 
     it ('Should analyze an input with empty fields',function() {
