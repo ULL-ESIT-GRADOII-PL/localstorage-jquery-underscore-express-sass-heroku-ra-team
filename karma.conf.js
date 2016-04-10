@@ -21,7 +21,6 @@ module.exports = function(config) {
     files: [
 	  'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
 	  'https://cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.min.js',
-      'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js',
       'public/test/index.html',
       'public/test/csv-testing.js',
       'public/js/csv.js'
@@ -37,16 +36,6 @@ module.exports = function(config) {
     preprocessors: {
       'public/test/index.html':['html2js'],
     },
-    
-    plugins : [
-      'karma-mocha',
-      'karma-chai',
-      'karma-chrome-launcher',
-      'karma-firefox-launcher',
-      'karma-html2js-preprocessor',
-      'karma-phantomjs-launcher',
-      'karma-safari-launcher'
-    ],
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
