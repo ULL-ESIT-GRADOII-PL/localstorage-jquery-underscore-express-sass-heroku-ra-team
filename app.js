@@ -10,15 +10,15 @@ require('ejs').delimiter = '$';
 
 app.use(expressLayouts);
 
-app.use(express.static(__dirname + '/csv-testing'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (request, response) {
     response.render('index', { title: 'Language Processors - Comma Separated Values Analyzer' });
 });
 
-app.get('', function (request, response) {
-
-});
+//app.get('/test', function (request, response) {
+    //response.render('csv-testing/test', { title: 'CSV TESTS' });
+//});
 
 app.listen(app.get('port'), function () {
     console.log("Node app is running at localhost:" + app.get('port'));
