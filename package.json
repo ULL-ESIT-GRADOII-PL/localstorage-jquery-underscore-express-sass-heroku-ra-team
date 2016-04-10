@@ -48,15 +48,15 @@
     "phantomjs": "^1.9.16",
     "sinon": "^1.17.3"
   },
+  "engines": {
+	"node": "0.10.x"
+  },
   "dependencies": {
     "ejs": "^2.4.1",
     "express": "^4.13.4",
-    "express-ejs-layouts": "^1.1.0",
-    "underscore": "^1.8.3",
-    "body-parser":"*"
+    "underscore": "^1.8.3"
   },
   "scripts": {
-    "test": "gulp test",
-    "start": "node app.js"
+    "test": "gulp test"
   }
 }
