@@ -30,6 +30,8 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
   background-color: white; }
 
+tr.error {
+  background-color: red; }
 
 
 /*# sourceMappingURL=global.css.map */
