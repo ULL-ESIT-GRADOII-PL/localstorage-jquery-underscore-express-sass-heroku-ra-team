@@ -22,12 +22,19 @@
       var error = false;
 
       // skip empty lines and comments
-      if (temp.match(/(^\s*$)|(^#.*)/)) continue; 
+      if (temp.match(/(^\s*$)|(^#.*)/)) continue;
       if (m) {
         result = m.map(removeQuotes);
+        alert (result);
         error = (commonLength != m.length);
         var rowclass = error? 'error' : '';
         r.push({ value: result, rowClass: rowclass });
+      }
+      else {
+
+        var error = 'The Row "' + temp + '" is not an allowed CSV value'
+        alert(error);
+        r.push({value: error.split("").splite(commonLength), rowClass: 'error'})
       }
     }
     return r;

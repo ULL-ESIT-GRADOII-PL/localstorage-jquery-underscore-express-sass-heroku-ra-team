@@ -13,4 +13,9 @@ body {
   font: 100% Helvetica, sans-serif;
   background-color: #86E2D5; }
 
+
+#result {
+  border: 1px solid black;
+}
+
 /*# sourceMappingURL=global.css.map */
